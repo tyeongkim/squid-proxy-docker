@@ -1,0 +1,9 @@
+services:
+  squid:
+    build: .
+    ports:
+      - "3128:3128"
+    environment:
+      - PROXY_USER=${PROXY_USER}
+      - PROXY_PASS=${PROXY_PASS}
+    restart: unless-stopped
