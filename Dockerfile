@@ -1,8 +1,4 @@
-FROM ubuntu:24.04
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends squid apache2-utils && \
-    rm -rf /var/lib/apt/lists/*
+FROM ubuntu/squid:stable
 
 COPY squid.conf /etc/squid/squid.conf
 COPY entrypoint.sh /entrypoint.sh
