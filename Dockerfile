@@ -1,4 +1,4 @@
-FROM ubuntu/squid:stable
+FROM ubuntu/squid:latest
 
 COPY squid.conf /etc/squid/squid.conf
 COPY entrypoint.sh /entrypoint.sh
