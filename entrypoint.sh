@@ -6,6 +6,6 @@ PROXY_PASS="${PROXY_PASS:?PROXY_PASS env is required}"
 
 htpasswd -cb /etc/squid/passwd "$PROXY_USER" "$PROXY_PASS"
 
-squid -z
+squid -z -N
 
 exec squid -N -f /etc/squid/squid.conf

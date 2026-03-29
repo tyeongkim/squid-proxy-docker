@@ -6,4 +6,9 @@ services:
     environment:
       - PROXY_USER=${PROXY_USER}
       - PROXY_PASS=${PROXY_PASS}
+    volumes:
+      - squid_cache:/var/spool/squid
     restart: unless-stopped
+
+volumes:
+  squid_cache:
